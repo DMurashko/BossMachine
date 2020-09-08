@@ -1,6 +1,6 @@
 const express = require('express');
 const apiRouter = express.Router();
-import {
+const {
 	createMeeting,
 	getAllFromDatabase,
 	getFromDatabaseById,
@@ -8,7 +8,7 @@ import {
 	updateInstanceInDatabase,
 	deleteFromDatabasebyId,
 	deleteAllFromDatabase,
-} from './db.js';
+} = require('./db.js');
 
 apiRouter.get('/minions', (req, res, next) => {
 	let mins = getAllFromDatabase('minions');
