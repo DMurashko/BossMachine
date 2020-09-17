@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
 
 module.exports = app;
 
@@ -9,6 +10,9 @@ module.exports = app;
 *  the frontend application to interact as planned with the api server
 */
 const PORT = process.env.PORT || 4001;
+
+//The constant below will serve as a static path to the starting page of the site. - DM
+const PATH = '/index.html';
 
 // Add middleware for handling CORS requests from index.html
 app.use(cors());
